@@ -20,7 +20,14 @@ export default function MenuCard({
             Hint: use map, check index.tsx for more info on how map works.
             */}
           {
-            JSON.stringify(menu)
+            // JSON.stringify(menu)
+            menu.map(menuSection =>
+              <div>
+                <b>{menuSection[0]}</b>
+                {menuSection[1].map(item => <div>{item}</div>)}
+                <br/>
+              </div>
+            )
           }
         </Card>
     )
